@@ -4,46 +4,62 @@
 #+options: toc:nil
 
 * Organisatorisches
+
   * Fragen per Mail oder nach der Übung
   * Sprechzeiten nach Vereinbarung
   * Diese Mitschriften gibt es unter [[https://github.com/denki/aud-w2018-tut1]].
 
 * Wiederholung Mengenlehre
+
   * Unter einer *Menge* verstehen wir jede Zusammenfassung M von bestimmten wohlunterschiedenen Objekten m unserer Anschauung oder unseres Denkens (welche die *Elemente* von M genannt werden) zu einem Ganzen. [Georg Cantor, 1895]
-  * Beispiele:
-  * set-builder Notation
-  * Teilmenge/Obermenge, Kardinalität, Potenzmenge
-  * Vereinigung, Schnitt, Differenz
+  * Beispiele: {{0, 2, 4, …}, {1, 3, 5, …}}, {0, 1, 2, 3, 4, …}, {0, 2, 4, 6, …}, {das, ist, eine, Menge}, {ℕ, ℤ, 1, Wort}, {1, 1, 2}
+  * set-builder Notation: {n² | n ∈ ℕ, n < 5} = {0, 1, 4, 9, 16}
+  * Teilmenge/Obermenge (⊆ und ⊇)
+  * Kardinalität: |{1, 2, 3, 4}| = 4, |ℕ| = ∞
+  * Potenzmenge: P({1, 2, 3}) = {∅, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}
+  * Vereinigung ∪, Schnitt ∩, Differenz ∖
 
 * Lösungen zu Aufgabe 1 (AGS 2.1.1)
 
-| Begriff           | Erklärung | Beispiel |
-|-------------------+-----------+----------|
-| Syntax            |           |          |
-| Semantik          |           |          |
-| Objektsprache     |           |          |
-| Metasprache       |           |          |
-| Alphabet          |           |          |
-| Wort              |           |          |
-| Konkatenation     |           |          |
-| (formale) Sprache |           |          |
-| Komplexprodukt    |           |          |
-| Stern             |           |          |
+| Begriff             | Erklärung                           | Beispiel       |
+|---------------------+-------------------------------------+----------------|
+| Syntax              | Struktur (einer Sprache)            | S-V-O          |
+| Semantik            | Bedeutung                           | „=“ Zuweisung  |
+| Objektsprache       | zu beschreibende Sprache            | C              |
+| Metasprache         | Beschreibungssprache                | EBNF, Deutsch  |
+| Alphabet Σ          | nichtleere endliche Menge           | {0, 1}         |
+| Wort w              | Aneinanderreihung von Symbolen      | 000, 01, 10, ε |
+| Konkatenation       | Verkettung von Wörtern              | ε⋅10 = 10      |
+| (formale) Sprache L | Menge von Wörtern L ⊆ Σ*            | L₁ = {000, 01} |
+|                     |                                     | L₂ = Σ*        |
+| Komplexprodukt      | Verkettung von Sprachen ⋅           | s.u.           |
+| Kleene-Stern        | L* = ⋃ₙ Lⁿ, Lⁿ⁺¹ = Lⁿ ⋅ L, L⁰ = {ε} | s.u.           |
 
 * Lösungen zu Aufgabe 2 (AGS 2.1.2)
 
+  * a12b, ab12, aaaab, ab, ε ∈ Σ*
+  * P(Σ*) ∋ {a}, {b}, {a, 1}, {ab12, ε}, ∅, {bb}, Σ*
+  * Σ* ⊇ {a}, {b}, {a, 1}, {ab12, ε}, ∅, {bb}, Σ*
+
 * Lösungen zu Aufgabe 3 (AGS 2.1.3*)
 
-  * L₁ ⋅ L₂ ⋅ L₃ = 
-  * L₁* =
-  * L₃* =
-  * L₂* ⋅ L₁
-  * P(L₁*) = 
+  * L₁ ⋅ L₂ ⋅ L₃ = {a} ⋅ {b} ⋅ {a, ba} = {ab} ⋅ {a, ba} = {aba, abba}
+  * L₁* = {a}* = {ε} ∪ {a} ∪ {aa} ∪ {aaa} ∪ … = {aⁿ ∣ n ∈ ℕ}
+  * L₃* = {a, ba}* = {ε} ∪ {a, ba} ∪ {aa, aba, baa, baba} ∪ …
+  * L₂* ⋅ L₁ = {bⁿ | n ∈ ℕ} ⋅ {a} = {bⁿa ∣ n ∈ ℕ}
+  * P(L₁*) = { {aⁿ | n ∈ I} | I ⊆ ℕ }
 
 * Lösungen zu Aufgabe Z1 (AGS 2.1.4)
 
-  * {aaa, aaca} = 
-  * {baca, baa, bcaca, bcaa} = 
-  * {ε, a, aa, ca, aaa, caa, aca, caca, …} = 
+  * {aaa, aaca} = L₂ ⋅ L₂ ⋅ {a, ca} = L₂ ⋅ L₂ ⋅ L₃ = L₂² ⋅ L₃
+  * {baca, baa, bcaca, bcaa} = L₁ ⋅ {aca, aa} = L₁ ⋅ L₂ ⋅ {ca, a} = L₁ ⋅ L₂ ⋅ L₃
+  * {ε, a, aa, ca, aaa, caa, aca, caca, …} = L₃* 
 
 * Lösungen zu Aufgabe Z2 (AGS 2.1.5)
+
+  * {a} ⋅ ∅       ∪ {b} = {b}
+  * {a} ⋅ {b}     ∪ {b} = {b, ab}
+  * {a} ⋅ {b, ab} ∪ {b} = {b, ab, aab}
+  * …                     {aⁿb | n ∈ ℕ}
+  
+  {a} ⋅ {aⁿb ∣ n ∈ ℕ} ∪ {b} = {aⁿb ∣ n ∈ ℕ₊} ∪ {b} = {aⁿb ∣ n ∈ ℕ₊} ∪ {aⁿb ∣ n = 0} = {aⁿb ∣ n ∈ ℕ} =: L₁ 
