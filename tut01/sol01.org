@@ -16,7 +16,7 @@
   * set-builder Notation: {n² | n ∈ ℕ, n < 5} = {0, 1, 4, 9, 16}
   * Teilmenge/Obermenge (⊆ und ⊇)
   * Kardinalität: |{1, 2, 3, 4}| = 4, |ℕ| = ∞
-  * Potenzmenge: P({1, 2, 3}) = {∅, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}
+  * Potenzmenge: 𝒫({1, 2, 3}) = {∅, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}
   * Vereinigung ∪, Schnitt ∩, Differenz ∖
 
 * Lösungen zu Aufgabe 1 (AGS 2.1.1)
@@ -38,7 +38,7 @@
 * Lösungen zu Aufgabe 2 (AGS 2.1.2)
 
   * a12b, ab12, aaaab, ab, ε ∈ Σ*
-  * P(Σ*) ∋ {a}, {b}, {a, 1}, {ab12, ε}, ∅, {bb}, Σ*
+  * 𝒫(Σ*) ∋ {a}, {b}, {a, 1}, {ab12, ε}, ∅, {bb}, Σ*
   * Σ* ⊇ {a}, {b}, {a, 1}, {ab12, ε}, ∅, {bb}, Σ*
 
 * Lösungen zu Aufgabe 3 (AGS 2.1.3*)
@@ -47,7 +47,7 @@
   * L₁* = {a}* = {ε} ∪ {a} ∪ {aa} ∪ {aaa} ∪ … = {aⁿ ∣ n ∈ ℕ}
   * L₃* = {a, ba}* = {ε} ∪ {a, ba} ∪ {aa, aba, baa, baba} ∪ …
   * L₂* ⋅ L₁ = {bⁿ | n ∈ ℕ} ⋅ {a} = {bⁿa ∣ n ∈ ℕ}
-  * P(L₁*) = { {aⁿ | n ∈ I} | I ⊆ ℕ }
+  * 𝒫(L₁*) = { {aⁿ | n ∈ I} | I ⊆ ℕ }
 
 * Lösungen zu Aufgabe Z1 (AGS 2.1.4)
 
