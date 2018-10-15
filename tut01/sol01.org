@@ -1,0 +1,49 @@
+#+title: Lösungen zum 1. Übungsblatt
+#+date: 2018-10-15
+#+email: tobias.denkinger@tu-dresden.de
+#+options: toc:nil
+
+* Organisatorisches
+  * Fragen per Mail oder nach der Übung
+  * Sprechzeiten nach Vereinbarung
+  * Diese Mitschriften gibt es unter [[https://github.com/denki/aud-w2018-tut1]].
+
+* Wiederholung Mengenlehre
+  * Unter einer *Menge* verstehen wir jede Zusammenfassung M von bestimmten wohlunterschiedenen Objekten m unserer Anschauung oder unseres Denkens (welche die *Elemente* von M genannt werden) zu einem Ganzen. [Georg Cantor, 1895]
+  * Beispiele:
+  * set-builder Notation
+  * Teilmenge/Obermenge, Kardinalität, Potenzmenge
+  * Vereinigung, Schnitt, Differenz
+
+* Lösungen zu Aufgabe 1 (AGS 2.1.1)
+
+| Begriff           | Erklärung | Beispiel |
+|-------------------+-----------+----------|
+| Syntax            |           |          |
+| Semantik          |           |          |
+| Objektsprache     |           |          |
+| Metasprache       |           |          |
+| Alphabet          |           |          |
+| Wort              |           |          |
+| Konkatenation     |           |          |
+| (formale) Sprache |           |          |
+| Komplexprodukt    |           |          |
+| Stern             |           |          |
+
+* Lösungen zu Aufgabe 2 (AGS 2.1.2)
+
+* Lösungen zu Aufgabe 3 (AGS 2.1.3*)
+
+  * L₁ ⋅ L₂ ⋅ L₃ = 
+  * L₁* =
+  * L₃* =
+  * L₂* ⋅ L₁
+  * P(L₁*) = 
+
+* Lösungen zu Aufgabe Z1 (AGS 2.1.4)
+
+  * {aaa, aaca} = 
+  * {baca, baa, bcaca, bcaa} = 
+  * {ε, a, aa, ca, aaa, caa, aca, caca, …} = 
+
+* Lösungen zu Aufgabe Z2 (AGS 2.1.5)
