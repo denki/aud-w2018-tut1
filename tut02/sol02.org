@@ -1,0 +1,103 @@
+#+title: Lösungen zum 2. Übungsblatt
+#+date: 2018-10-22
+#+email: tobias.denkinger@tu-dresden.de
+#+options: toc:nil
+
+* Hinweise
+  * Zusätzlich zu den Übungsaufgaben wurde eine dritte Folie gezeigt.  Diese besteht aus zwei Teilen:
+    * Der *Rücksprungalgorithmus* ist im Vorlesungsmaterial auf Seite 20 zu finden.
+    * Die *Definition von EBNF-Termen* ist im Vorlesungsmaterial auf Seite 21 zu finden.
+
+* Lösung zu Aufgabe 1 (AGS 2.2.46)
+** Teilaufgabe a
+
+| Wort | Markenkeller |
+|      |          <r> |
+|------+--------------|
+| c    |            1 |
+| c    |          +1+ |
+| c    |            ε |
+
+| Wort | Markenkeller |
+|      |          <r> |
+|------+--------------|
+| c    |            1 |
+| caaa |          +1+ |
+| caaa |            ε |
+
+** Teilaufgabe b
+
+| Wort | Markenkeller |
+|      |          <r> |
+|------+--------------|
+| a    |            1 |
+| aa   |          +1+ |
+| aaac |            ε |
+
+| Wort   | Markenkeller |
+|        |          <r> |
+|--------+--------------|
+| a      |            1 |
+| ab     |          2 1 |
+| aba    |        +2+ 1 |
+| abac   |          +1+ |
+| abacac |            ε |
+
+** Teilaufgabe c
+
+| Wort | Markenkeller |
+|      |          <r> |
+|------+--------------|
+| ε    |            ε |
+
+| Wort   | Markenkeller |
+|        |          <r> |
+|--------+--------------|
+| a      |            1 |
+| ab     |          +1+ |
+| aba    |            1 |
+| aba    |          2 1 |
+| abaa   |        1 2 1 |
+| abaab  |      +1+ 2 1 |
+| abaab  |        +2+ 1 |
+| abaabc |          +1+ |
+| abaabc |            ε |
+
+* Lösung zu Aufgabe 2 (AGS 2.2.6)
+** Teilaufgabe a
+**siehe Tafel**
+
+** Teilaufgabe b
+
+| Wort       | Markenkeller |
+|            |          <r> |
+|------------+--------------|
+| a          |            1 |
+| a          |          2 1 |
+| aa         |        1 2 1 |
+| aaa        |      3 1 2 1 |
+| aaa        |    2 3 1 2 1 |
+| aaaaccb    |  +2+ 3 1 2 1 |
+| aaaaccb    |    +3+ 1 2 1 |
+| aaaaccbd   |      +1+ 2 1 |
+| aaaaccbdb  |        +2+ 1 |
+| aaaaccbdb  |          +1+ |
+| aaaaccbdbb |            ε |
+
+* Lösung zu Aufgabe 3 (AGS 2.2.4)
+**siehe Tafel**
+
+* Lösung zu Aufgabe 4 (AGS 2.2.10)
+
+  * V = {A, B}
+  * Σ = {a, b, c, d}
+
+| Zeichenkette | ∈ T(Σ, V) | Begründung       |
+|--------------+-----------+------------------|
+| (a)          | ja        | 1. und 3.        |
+| (b)          | ja        | 1. und 3. und 3. |
+| (c)          | nein      | C ∉ V ∪ Σ ∪ M    |
+| (d)          | nein      | ∪ ∉ V ∪ Σ ∪ M    |
+| (e)          | ja        | 2. und 4. und 3. |
+| (f)          | nein      | 4. oder 3.       |
+| (g)          | nein      | * ∉ Σ ∪ V ∪ M    |
