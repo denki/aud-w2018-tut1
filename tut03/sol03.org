@@ -1,0 +1,101 @@
+#+title: Lösungen zum 3. Übungsblatt
+#+date: 2018-10-29
+#+email: tobias.denkinger@tu-dresden.de
+#+options: toc:nil
+#+HTML_HEAD_EXTRA: <style> .figure p {text-align: left;}</style>
+
+* Lösungen zu Aufgabe 1 (AGS 2.2.24)
+** Teilaufgabe a
+
+#+begin_src elisp
+L = {aⁿbᵐvaw ∣ n ≥ m ≥ 0, v, w ∈ Σ*, |v| = |w|}
+  = {aⁿbᵐ ∣ n ≥ m ≥ 0} ⋅ {vaw ∣ v, w ∈ Σ*, |v| = |w|}
+  = {aᵐaⁱbᵐ ∣ i, m ≥ 0} ⋅ {vaw ∣ v, w ∈ Σ*, |v| = |w|}
+    └────────┬────────┘   └────────────┬─────────────┘
+             A                         B
+#+end_src
+
+#+attr_html: :width 1000px
+[[./sol03-1a.png]]
+
+** Teilaufgabe b
+
+  * Wort: aabababb
+
+| Wort     | Markenkeller |
+|          |          <r> |
+|----------+--------------|
+| ε        |            1 |
+| a        |          3 1 |
+| aa       |        +3+ 1 |
+| aab      |          +1+ |
+| aab      |            2 |
+| aaba     |          4 2 |
+| aabab    |        4 4 2 |
+| aababa   |      +4+ 4 2 |
+| aababab  |        +4+ 2 |
+| aabababb |          +2+ |
+| aabababb |            ε |
+
+* Lösungen zu Aufgabe 2 (AGS 2.2.22*)
+** Teilaufgabe a
+
+  * R = { S ::= (aA ∣ c),  A ::= [aSb] }
+  * S ::= (aA ∣ c) ‘≡’ (a[aSb] ∣ c) ‘≡’ (aaSb ∣ a ∣ c)
+  * L(ℰ) = {a²ⁿxbⁿ ∣ n ∈ ℕ, x ∈ {a, c}}
+
+** Teilaufgabe b
+
+#+attr_html: :width 500px
+[[./sol03-2b.png]]
+
+* Lösungen zu Aufgabe 3 (AGS 2.2.48)
+** Teilaufgabe a
+  * ℰ = (V, Σ, S, R)
+  * V = {S, A}
+  * R = { S ::= aa{a}Aaa{a},  A ::=  (bbAbbb | aa{a}) }
+
+** Teilaufgabe b
+
+#+begin_src elisp
+f: (V → 𝒫(Σ*)) → (V → 𝒫(Σ*))
+f: ρ ↦ S(⟦(aSa∣[b])⟧(ρ))
+
+⟦(aSa|[b])⟧(ρ)
+= ⟦aSa⟧(ρ) ∪ ⟦[b]⟧(ρ)
+= ⟦aSa⟧(ρ) ∪ ⟦b⟧(ρ) ∪ {ε}
+= ⟦aSa⟧(ρ) ∪ {b} ∪ {ε}
+= ⟦a⟧(ρ) ⋅ ⟦S⟧(ρ) ⋅ ⟦a⟧(ρ) ∪ {b} ∪ {ε}
+= {a} ⋅ ⟦S⟧(ρ) ⋅ {a} ∪ {b} ∪ {ε}
+= {a} ⋅ ρ(S) ⋅ {a} ∪ {b} ∪ {ε}
+
+{a} ⋅ {aⁿwaⁿ ∣ n ≥ 0,  w ∈ {ε, b}} ⋅ {a} ∪ {b} ∪ {ε}
+= {aaⁿwaⁿa ∣ n ≥ 0,  w ∈ {ε, b}} ∪ {b} ∪ {ε}
+= {aaⁿwaⁿa ∣ n ≥ 0,  w ∈ {ε, b}} ∪ {ε, b}
+= {aaⁿwaⁿa ∣ n ≥ 0,  w ∈ {ε, b}} ∪ {a⁰wa⁰ ∣ w ∈ {ε, b}}
+= {aⁿwaⁿ ∣ n ≥ 1,  w ∈ {ε, b}} ∪ {aⁿwaⁿ ∣ n = 0, w ∈ {ε, b}}
+= {aⁿwaⁿ ∣ n ≥ 0, w ∈ {ε, b}}
+#+end_src
+
+** Teilaufgabe c
+
+/Hausaufgabe/
+
+* Lösung zu Aufgabe 4 (AGS 2.2.50)
+** Teilaufgabe a
+
+/Hausaufgabe/
+
+** Teilaufgabe b
+
+#+begin_src elisp
+f(ρ)= S⎛⟦[aAb]⟧(ρ)  ⎞ = S⎛{a} ⋅ ρ(A) ⋅ {b} ∪ {ε} ⎞ 
+      A⎝⟦(Sc∣cS)⟧(ρ)⎠   A⎝ρ(S) ⋅ {c} ∪ {c} ⋅ ρ(S)⎠
+
+⊥ = S⎛∅⎞ ↦ ⎛{ε}⎞ ↦ ⎛{ε}⎞ ↦ ⎛{ε, acb}⎞ ↦ … (Hausaufgabe)
+    A⎝∅⎠   ⎝ ∅ ⎠   ⎝{c}⎠   ⎝{c}     ⎠
+#+end_src
+
+** Teilaufgabe c
+
+/Hausaufgabe/

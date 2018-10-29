@@ -4,9 +4,9 @@
 #+options: toc:nil
 
 * Hinweise
-  * Zusätzlich zu den Übungsaufgaben wurde eine dritte Folie gezeigt.  Diese besteht aus zwei Teilen:
-    * Der *Rücksprungalgorithmus* ist im Vorlesungsmaterial auf Seite 20 zu finden.
-    * Die *Definition von EBNF-Termen* ist im Vorlesungsmaterial auf Seite 21 zu finden.
+  * Zusätzlich zu den Übungsaufgaben wurde eine *dritte Folie* gezeigt.  Diese besteht aus zwei Teilen:
+    * Der *Rücksprungalgorithmus* ist im Vorlesungsmaterial auf /Seite 20/ zu finden.
+    * Die *Definition von EBNF-Termen* ist im Vorlesungsmaterial auf /Seite 21/ zu finden.
 
 * Lösung zu Aufgabe 1 (AGS 2.2.46)
 ** Teilaufgabe a
@@ -65,7 +65,7 @@
 
 * Lösung zu Aufgabe 2 (AGS 2.2.6)
 ** Teilaufgabe a
-**siehe Tafel**
+/siehe Tafel/
 
 ** Teilaufgabe b
 
@@ -85,7 +85,7 @@
 | aaaaccbdbb |            ε |
 
 * Lösung zu Aufgabe 3 (AGS 2.2.4)
-**siehe Tafel**
+/siehe Tafel/
 
 * Lösung zu Aufgabe 4 (AGS 2.2.10)
 
