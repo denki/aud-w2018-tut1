@@ -1,0 +1,71 @@
+#+title: Lösungen zum 4. Übungsblatt
+#+date: 2018-11-05
+#+email: tobias.denkinger@tu-dresden.de
+#+options: toc:nil
+
+* Lösungen zu Aufgabe 1 (AGS 2.2.39)
+** Teilaufgabe a
+
+#+begin_src elisp
+f(ρ) = S⎛⟦[B]b⟧(ρ)⎞ = ⎛ρ(B) ⋅ {b} ∪ {b}⎞
+       B⎝⟦Sb⟧(ρ)  ⎠   ⎝ρ(S) ⋅ {b}      ⎠
+
+⊥ = S⎛∅⎞
+    B⎝∅⎠
+  ↦ ⎛{b}⎞
+    ⎝ ∅ ⎠
+  ↦ ⎛{b} ⎞
+    ⎝{b²}⎠
+  ↦ ⎛{b, b³}⎞
+    ⎝{b²}   ⎠
+  ↦ ⎛{b, b³} ⎞
+    ⎝{b², b⁴}⎠
+  ↦ ⎛{b, b³, b⁵}⎞
+    ⎝{b², b⁴}   ⎠
+#+end_src
+
+** Teilaufgabe b
+
+  * W(ℰ, S) = {b²ⁿ⁺¹ ∣ n ∈ ℕ}
+  * W(ℰ, B) = {b²ⁿ ∣ n ∈ ℕ₊}
+
+** Teilaufgabe c
+
+#+begin_src elisp
+Seien ρ(S) = ρ(A) = {(ba)ⁿb ∣ n ∈ ℕ}.  Zu zeigen: ⟦{ba}A⟧(ρ) = ρ(S).
+
+Beweis:
+
+⟦{ba}A⟧(ρ)
+= ⟦{ba}⟧(ρ) ⋅ ⟦A⟧(ρ)
+= (⟦ba⟧(ρ))* ⋅ ⟦A⟧(ρ)
+= (⟦b⟧(ρ) ⋅ ⟦a⟧(ρ))* ⋅ ⟦A⟧(ρ)
+= ({b} ⋅ {a})* ⋅ ⟦A⟧(ρ)
+= ({b} ⋅ {a})* ⋅ ρ(A)
+= ({b} ⋅ {a})* ⋅ {(ba)ⁿb ∣ n ∈ ℕ}
+= {ba}* ⋅ {(ba)ⁿb ∣ n ∈ ℕ}
+= {(ba)ᵐ ∣ m ∈ ℕ} ⋅ {(ba)ⁿb ∣ n ∈ ℕ}
+= {(ba)ᵐ(ba)ⁿb ∣ m, n ∈ ℕ}
+= {(ba)ᵏb ∣ m, n ∈ ℕ, k = m + n}
+= {(ba)ᵏb ∣ k ∈ ℕ}
+= {(ba)ⁿb ∣ n ∈ ℕ}
+= ρ(S)
+#+end_src
+
+* Lösungen zu Aufgabe 2 (AGS 3.1.2)
+
+** Teilaufgabe a
+
+#+include: "sol04-2a.c" src c
+
+** Teilaufgabe b
+
+#+include: "sol04-2b.c" src c
+
+** Teilaufgabe a
+
+#+include: "sol04-2c.c" src c
+
+* Lösungen zu Aufgabe 3 (AGS 3.1.6)
+
+/Hausaufgabe/

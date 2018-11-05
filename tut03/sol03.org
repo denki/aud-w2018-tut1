@@ -81,7 +81,7 @@ f: ρ ↦ S(⟦(aSa∣[b])⟧(ρ))
 
 /Hausaufgabe/
 
-* Lösung zu Aufgabe 4 (AGS 2.2.50)
+* Lösungen zu Aufgabe 4 (AGS 2.2.50)
 ** Teilaufgabe a
 
 /Hausaufgabe/
