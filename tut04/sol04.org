@@ -53,7 +53,6 @@ Beweis:
 #+end_src
 
 * Lösungen zu Aufgabe 2 (AGS 3.1.2)
-
 ** Teilaufgabe a
 
 #+include: "sol04-2a.c" src c

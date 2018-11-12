@@ -1,0 +1,64 @@
+#+title: Lösungen zum 5. Übungsblatt
+#+date: 2018-11-12
+#+email: tobias.denkinger@tu-dresden.de
+#+options: toc:nil
+
+* Lösungen zu Aufgabe 1 (AGS 3.1.15)
+** Teilaufgabe a
+
+#+include: "sol05-1a.c" src c
+
+** Teilaufgabe b
+
+#+include: "sol05-1b.c" src c
+
+** Teilaufgabe c
+
+#+include: "sol05-1c.c" src c
+
+* Lösungen zu Aufgabe 2
+
+Der folgende Code löst die gestellte Aufgabe /nicht/.
+Stattdessen wird eine Funktion implementiert, die die Werte der von ihren Parametern referenzierten Speicherzellen tauscht.
+~swapCool~ benötigt nur drei Machinenbefehle.
+~swapCool~ sollte nur verwendet werden, wenn sichergestellt werden kann, dass ~i~ und ~j~ auf verschiedene Speicherzellen zeigen.
+
+#+include: "sol05-2.c" src c
+
+* Lösungen zu Aufgabe 3 (AGS 4.22)
+** Teilaufgabe a
+
+| Objektname   | Gültigkeitsbereich |
+|--------------+--------------------|
+| a, b in main | 26–34              |
+| x, y in f    | 5–12               |
+| x, y in g    | 14–23              |
+| g            | 3–34               |
+| f            | 5–34               |
+| main         | 25–34              |
+
+** Teilaufgabe b
+
+#+ATTR_HTML: :rules groups :frame border
+| Haltepunkt | ←RM |  1 |  2 |  3 |  4 |  5 |  6 |  7 |  8 |
+| /          |  <> | <> | <> | <> | <> | <> | <> | <> | <> |
+|------------+-----+----+----+----+----+----+----+----+----|
+| label6     |   – |  a |  b |    |    |    |    |    |    |
+|            |     |  3 |  6 |    |    |    |    |    |    |
+|------------+-----+----+----+----+----+----+----+----+----|
+| label1     |   3 |    |    |  x |  y |    |    |    |    |
+|            |     |    |    |  1 |  6 |    |    |    |    |
+|------------+-----+----+----+----+----+----+----+----+----|
+| label2     |   3 |    |    |  x |  y |    |    |    |    |
+|            |     |  9 |    |  1 |  6 |    |    |    |    |
+|------------+-----+----+----+----+----+----+----+----+----|
+| label3     | 1:3 |    |    |    |    |  x |  y |    |    |
+|            |     |    |    |    |    |  9 |  4 |    |    |
+|------------+-----+----+----+----+----+----+----+----+----|
+| label4     | 1:3 |    |    |    |    |  x |  y |    |    |
+|            |     |    |    |    | 12 |  9 |  4 |    |    |
+|------------+-----+----+----+----+----+----+----+----+----|
+| label5     | 1:3 |    |    |    |    |  x |  y |    |    |
+|            |     |    |    |    |    |  9 |  4 |    |    |
+|------------+-----+----+----+----+----+----+----+----+----|
+|            |     |    |    |    |    |    |    |    |    |
