@@ -65,4 +65,7 @@
 
 * Lösungen zu Aufgabe 3 (AGS 3.2.36)
 
-/Hausaufgabe/
+#+attr_html: :width 800px
+[[./sol06-3.png]]
+
+#+include: "sol06-3.c" src c

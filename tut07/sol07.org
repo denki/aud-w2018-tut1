@@ -1,0 +1,50 @@
+#+title: Lösungen zum 7. Übungsblatt
+#+date: 2018-11-26
+#+email: tobias.denkinger@tu-dresden.de
+#+options: toc:nil
+#+HTML_HEAD_EXTRA: <style> .figure p {text-align: left;}</style>
+
+* Lösungen zu Aufgabe 1 (AGS 3.2.34)
+** Teilaufgabe a
+
+#+include: "sol07-1a.c" src c
+
+** Teilaufgabe b
+
+#+include: "sol07-1b.c" src c
+
+* Lösungen zu Aufgabe 2 (AGS 6.1.10)
+
+#+begin_src
+4 7 [6] 2 9
+i         j
+
+4 7 [6] 2 9
+  i     j
+
+4 2 [6] 7 9
+    i,j
+
+4 2 [6] 7 9
+  j     i
+
+[4] 2 | 6 | [7] 9
+ i  j   =    i  j
+
+2 [4]       [7] 9
+j  i        i,j
+=====
+            [7] 9
+        j       i
+            =====
+
+2 4 6 7 9
+#+end_src
+
+* Lösungen zu Aufgabe 3 (AGS 6.2.12)
+
+ * Phase 1 (Herstellung der Heapeigenschaft):
+#+attr_html: :width 800px
+[[./sol07-3.png]]
+
+ * Phase 2 (Ausgabephase):  /nächste Woche/
