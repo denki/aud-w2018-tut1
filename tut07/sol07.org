@@ -43,8 +43,11 @@ j  i        i,j
 
 * Lösungen zu Aufgabe 3 (AGS 6.2.12)
 
- * Phase 1 (Herstellung der Heapeigenschaft):
+2 Phasen:
+ * Phase 1 (Herstellung der Heapeigenschaft)
+ * Phase 2 (Ausgabephase)
+
+Lösung:
 #+attr_html: :width 800px
 [[./sol07-3.png]]
 
- * Phase 2 (Ausgabephase):  /nächste Woche/
