@@ -23,3 +23,4 @@ Materialien zur Übung Algorithmen und Datenstrukturen, WiSe 2018/19, TU Dresden
 * [Übung 6](http://htmlpreview.github.io/?https://github.com/denki/aud-w2018-tut1/blob/master/tut06/sol06.html)
 * [Übung 7](http://htmlpreview.github.io/?https://github.com/denki/aud-w2018-tut1/blob/master/tut07/sol07.html)
 * [Übung 8](http://htmlpreview.github.io/?https://github.com/denki/aud-w2018-tut1/blob/master/tut08/sol08.html)
+* [Übung 9](http://htmlpreview.github.io/?https://github.com/denki/aud-w2018-tut1/blob/master/tut09/sol09.html)

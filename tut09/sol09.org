@@ -1,0 +1,48 @@
+#+title: Lösungen zum 9. Übungsblatt
+#+date: 2018-12-12
+#+email: tobias.denkinger@tu-dresden.de
+#+options: toc:nil
+#+HTML_HEAD_EXTRA: <style> .figure p {text-align: left;}</style>
+
+* Lösungen zu Aufgabe 1 (AGS 7.1.13)
+** Teilaufgabe a
+
+#+attr_html: :width 600px
+[[./sol09-1a.png]]
+
+** Teilaufgabe b
+
+#+attr_html: :width 400px
+[[./sol09-1b.png]]
+
+* Lösungen zu Aufgabe 2 (AGS 7.2.2)
+** Teilaufgabe a
+
+#+attr_html: :width 650px
+[[./sol09-2a.png]]
+
+Anzahl Backtraces: 3 ⋅ 2 = 6
+
+** Teilaufgabe b
+
+/siehe Tafel/
+
+* Lösung zu Aufgabe 3 (AGS 8.10)
+
+/siehe Tafel/
+
+* Lösungen zu Aufgabe Z2 (AGS 7.1.15)
+** Teilaufgabe a
+
+#+attr_html: :width 600px
+[[./sol09-Z2a.png]]
+
+** Teilaufgabe b
+
+| Position |  0 | 1 |  2 | 3 | 4 | 5 |
+|----------+----+---+----+---+---+---|
+| Pattern  |  a | c |  a | a | a | b |
+|----------+----+---+----+---+---+---|
+| Tabelle  | -1 | 0 | -1 | ? | 1 | 1 |
+
+
