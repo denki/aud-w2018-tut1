@@ -1,0 +1,47 @@
+#+title: Lösungen zum 10. Übungsblatt
+#+date: 2018-12-17
+#+email: tobias.denkinger@tu-dresden.de
+#+options: toc:nil
+#+HTML_HEAD_EXTRA: <style> .figure p {text-align: left;}</style>
+
+* Lösungen zu Aufgabe 1 (AGS 8.12)
+
+#+attr_html: :width 600px
+[[./sol10-1.png]]
+
+* Lösungen zu Aufgabe 2 (AGS 9.1.2)
+** Teilaufgabe a
+
+  * /graphische Darstellung siehe Tafel/
+  * 4! ⋅ 3! = 144 Abarbeitungsreihenfolgen
+
+** Teilaufgabe b
+
+  * 3 ⋅ 3! ⋅ 3! = 108 Abarbeitungsreihenfolgen bleiben übrig
+
+** Teilaufgabe c
+
+  * G' = (V, E')
+  * E' = E ∪ {(1,2), (1,3), (1,4)}
+
+* Lösung zu Aufgabe 3 (AGS 9.2.11)
+** Teilaufgabe a
+
+#+attr_html: :width 600px
+[[./sol10-3a.png]]
+
+** Teilaufgabe b
+
+#+attr_html: :width 600px
+[[./sol10-3b.png]]
+
+* Lösungen zu Aufgabe 4 (AGS 9.5.14)
+** Teilaufgabe a
+
+#+attr_html: :width 600px
+[[./sol10-4a.png]]
+
+** Teilaufgabe b
+
+  * Gewicht 2
+
