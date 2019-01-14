@@ -1,0 +1,67 @@
+#+title: Lösungen zum 12. Übungsblatt
+#+date: 2019-01-14
+#+email: tobias.denkinger@tu-dresden.de
+#+options: toc:nil
+
+* Lösungen zu Aufgabe 1 (AGS 9.3.5)
+** Teilaufgabe a
+#+begin_src elisp
+       ⎛0  2  5  ∞  4⎞
+       ⎜∞  0  2  ∞  1⎟
+mA_G = ⎜∞  ∞  0  3  ∞⎟ = D_G⁽⁰⁾
+       ⎜3  ∞  ∞  0  ∞⎟
+       ⎝∞  ∞  ∞  9  0⎠
+#+end_src
+
+** Teilaufgabe b
+  * D_G⁽¹⁾: (4,2,5), (4,3,8), (4,5,7)
+  * D_G⁽²⁾: (1,3,4), (1,5,3), (4,3,7), (4,5,6)
+
+** Teilaufgabe c
+  * D_G⁽³⁾: (1,4,7), (2,4,5)
+  * D_G⁽⁴⁾: (2,1,8), (3,1,6), (3,2,8), (3,5,9), (5,1,12), (5,2,14), (5,3,16)
+  * D_G: –
+
+* Lösungen zu Aufgabe 2 (AGS 9.4.25)
+** Teilaufgabe a
+(ℕ ∪ {∞}, max, min, 0, ∞)
+
+** Teilaufgabe b
+#+begin_src elisp
+       ⎛∞  5  3  0  0⎞
+       ⎜0  ∞  4  3  0⎟
+mA_G = ⎜0  4  ∞  0  2⎟ = D_G⁽⁰⁾
+       ⎜0  0  0  ∞  4⎟
+       ⎝0  0  0  0  ∞⎠
+#+end_src
+
+** Teilaufgabe c
+  * D_G⁽¹⁾: –
+  * D_G⁽²⁾: (1,3,4), (1,4,3), (3,4,3)
+  * D_G⁽³⁾: (1,5,2), (2,5,2)
+  * D_G⁽⁴⁾: (1,5,3), (2,5,3), (3,5,3)
+  * D_G⁽⁵⁾: –
+
+* Lösungen zu Aufgabe 3 (AGS 9.4.30)
+** Teilaufgabe a
+
+** Teilaufgabe b
+#+begin_src elisp
+       ⎛⎞
+mA_G = ⎜⎟
+       ⎝⎠
+#+end_src
+
+** Teilaufgabe c
+#+begin_src elisp
+         ⎛⎞
+D_G⁽¹⁾ = ⎜⎟
+         ⎝⎠
+#+end_src
+
+** Teilaufgabe d
+  * D_G⁽²⁾(3,3) = 
+  * D_G⁽³⁾(3,3) = 
+
+* Lösungen zu Aufgabe 4 (AGS 9.4.28c)
+/siehe Tafel/
