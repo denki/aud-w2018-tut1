@@ -43,25 +43,8 @@ mA_G = ⎜0  4  ∞  0  2⎟ = D_G⁽⁰⁾
   * D_G⁽⁵⁾: –
 
 * Lösungen zu Aufgabe 3 (AGS 9.4.30)
-** Teilaufgabe a
 
-** Teilaufgabe b
-#+begin_src elisp
-       ⎛⎞
-mA_G = ⎜⎟
-       ⎝⎠
-#+end_src
-
-** Teilaufgabe c
-#+begin_src elisp
-         ⎛⎞
-D_G⁽¹⁾ = ⎜⎟
-         ⎝⎠
-#+end_src
-
-** Teilaufgabe d
-  * D_G⁽²⁾(3,3) = 
-  * D_G⁽³⁾(3,3) = 
+/Hausaufgabe/
 
 * Lösungen zu Aufgabe 4 (AGS 9.4.28c)
 /siehe Tafel/
