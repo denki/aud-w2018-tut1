@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-01-28 Mo 12:44 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lösungen zum 14. Übungsblatt</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Lösungen zum 14. Übungsblatt</h1>
+<p>
+Aufgaben:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">#</th>
+<th scope="col" class="org-left">AGS</th>
+<th scope="col" class="org-left">Typ</th>
+<th scope="col" class="org-right">Stimmen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">9</td>
+<td class="org-left">10.19</td>
+<td class="org-left"><b>EM-Algorithmus</b></td>
+<td class="org-right">17</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">3.2.13</td>
+<td class="org-left"><b>C-Programmierung</b></td>
+<td class="org-right">17</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">2.2.53</td>
+<td class="org-left"><b>EBNF</b></td>
+<td class="org-right">10</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">9.5.16</td>
+<td class="org-left"><b>Dijkstra-Algorithmus</b></td>
+<td class="org-right">8</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">4.26</td>
+<td class="org-left">pulsierender Speicher</td>
+<td class="org-right">7</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">7.1.17</td>
+<td class="org-left">KMP-Algorithmus</td>
+<td class="org-right">7</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-left">7.2.5</td>
+<td class="org-left">Levenshtein-Distanz</td>
+<td class="org-right">2</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">6.1.13</td>
+<td class="org-left">Quicksort</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">6.2.15</td>
+<td class="org-left">Heapsort</td>
+<td class="org-right">0</td>
+</tr>
+</tbody>
+</table>
+
+<div id="outline-container-org1ece61a" class="outline-2">
+<h2 id="org1ece61a"><span class="section-number-2">1</span> Lösungen zu Aufgabe 2.2.53</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgb125fd3" class="outline-3">
+<h3 id="orgb125fd3"><span class="section-number-3">1.1</span> Teilaufgabe a</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>V = {A, S}</li>
+<li>R: S ::= (aScc|aAcc), A ::= (bAc|{b})</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf3d64fa" class="outline-3">
+<h3 id="orgf3d64fa"><span class="section-number-3">1.2</span> Teilaufgabe b</h3>
+<div class="outline-text-3" id="text-1-2">
+<div class="org-src-container">
+<pre class="src src-elisp">f<span style="color: #2aa198;">(</span>&#961;<span style="color: #2aa198;">)</span> = X &#9115;<span style="color: #2aa198;">&#10214;</span><span style="color: #b58900;">(</span>aXa|Y<span style="color: #b58900;">)</span><span style="color: #2aa198;">&#10215;(</span>&#961;<span style="color: #2aa198;">)</span>&#9118; = &#9115;{a} &#8728; &#961;<span style="color: #2aa198;">(</span>X<span style="color: #2aa198;">)</span> &#8728; {a} &#8746; &#961;<span style="color: #2aa198;">(</span>Y<span style="color: #2aa198;">)</span>&#9118;
+       Y &#9117;<span style="color: #2aa198;">&#10214;</span><span style="color: #b58900;">[</span>bY<span style="color: #b58900;">]</span><span style="color: #2aa198;">&#10215;(</span>&#961;<span style="color: #2aa198;">)</span>   &#9120;   &#9117;{b} &#8728; &#961;<span style="color: #2aa198;">(</span>Y<span style="color: #2aa198;">)</span> &#8746; {&#949;}       &#9120;
+
+&#8869; = &#9115;&#8709;&#9118; &#8614; &#9115; &#8709; &#9118; &#8614; &#9115; {&#949;} &#9118; &#8614; &#9115;{&#949;, b, aa}&#9118; &#8614; &#9115;{aa, aba, aaaa, &#949;, b, bb}&#9118;
+    &#9117;&#8709;&#9120;   &#9117;{&#949;}&#9120;   &#9117;{&#949;,b}&#9120;   &#9117;{&#949;, b, bb}&#9120;   &#9117;{&#949;, b, bb, bbb}          &#9120;
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>W(ℰ) = {aᵏbᵐaᵏ ∣ k, m ∈ ℕ}</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgee1a146" class="outline-2">
+<h2 id="orgee1a146"><span class="section-number-2">2</span> Lösungen zu Aufgabe 3.2.13</h2>
+<div class="outline-text-2" id="text-2">
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #268bd2;">#include</span> <span style="color: #2aa198;">&lt;</span><span style="color: #2aa198;">stdlib.h</span><span style="color: #2aa198;">&gt;</span>
+
+<span style="color: #859900; font-weight: bold;">struct</span> <span style="color: #b58900;">node</span> <span style="color: #2aa198;">{</span> <span style="color: #b58900;">int</span> <span style="color: #268bd2;">wert</span>; <span style="color: #859900; font-weight: bold;">struct</span> <span style="color: #b58900;">node</span> * <span style="color: #268bd2;">next</span>; <span style="color: #2aa198;">}</span>;
+
+<span style="color: #93a1a1;">// </span><span style="color: #93a1a1;">(a)</span>
+<span style="color: #859900; font-weight: bold;">struct</span> <span style="color: #b58900;">treeNode</span> <span style="color: #2aa198;">{</span> <span style="color: #b58900;">int</span> <span style="color: #268bd2;">value</span>; <span style="color: #859900; font-weight: bold;">struct</span> <span style="color: #b58900;">treeNode</span> * <span style="color: #268bd2;">left</span>; <span style="color: #859900; font-weight: bold;">struct</span> <span style="color: #b58900;">treeNode</span> * <span style="color: #268bd2;">right</span>; <span style="color: #2aa198;">}</span>
+
+<span style="color: #93a1a1;">// </span><span style="color: #93a1a1;">(b)</span>
+<span style="color: #859900; font-weight: bold;">struct</span> <span style="color: #b58900;">treeNode</span> * <span style="color: #268bd2;">full</span><span style="color: #2aa198;">(</span><span style="color: #859900; font-weight: bold;">struct</span> <span style="color: #b58900;">node</span> * <span style="color: #268bd2;">list</span><span style="color: #2aa198;">)</span> <span style="color: #2aa198;">{</span>
+  <span style="color: #859900; font-weight: bold;">if</span> <span style="color: #b58900;">(</span><span style="color: #b58900; font-weight: bold;">!</span>list<span style="color: #b58900;">)</span> <span style="color: #859900; font-weight: bold;">return</span> <span style="color: #268bd2; font-weight: bold;">NULL</span>;
+  <span style="color: #859900; font-weight: bold;">struct</span> <span style="color: #b58900;">treeNode</span> *<span style="color: #268bd2;">t</span> = malloc<span style="color: #b58900;">(</span><span style="color: #859900; font-weight: bold;">sizeof</span><span style="color: #268bd2;">(</span><span style="color: #859900; font-weight: bold;">struct</span> <span style="color: #b58900;">treeNode</span><span style="color: #268bd2;">)</span><span style="color: #b58900;">)</span>;
+  t-&gt;value = list-&gt;wert;
+  t-&gt;left = full<span style="color: #b58900;">(</span>list-&gt;next<span style="color: #b58900;">)</span>;
+  t-&gt;right = full<span style="color: #b58900;">(</span>list-&gt;next<span style="color: #b58900;">)</span>;
+
+  <span style="color: #859900; font-weight: bold;">return</span> t;
+<span style="color: #2aa198;">}</span>
+
+<span style="color: #93a1a1;">// </span><span style="color: #93a1a1;">(c)</span>
+<span style="color: #93a1a1;">// </span><span style="color: #93a1a1;">struct node * l;</span>
+<span style="color: #93a1a1;">// </span><span style="color: #93a1a1;">full(l);</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf4cf468" class="outline-2">
+<h2 id="orgf4cf468"><span class="section-number-2">3</span> Lösung zu Aufgabe 6.1.13</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+<i>siehe Aufgabensammlung</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeedc684" class="outline-2">
+<h2 id="orgeedc684"><span class="section-number-2">4</span> Lösung zu Aufgabe 6.2.15</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+<i>siehe Aufgabensammlung</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org167db47" class="outline-2">
+<h2 id="org167db47"><span class="section-number-2">5</span> Lösung zu Aufgabe 4.26</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+<i>siehe Aufgabensammlung</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org08f7e87" class="outline-2">
+<h2 id="org08f7e87"><span class="section-number-2">6</span> Lösungen zu Aufgabe 9.5.16</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgec528ff" class="outline-3">
+<h3 id="orgec528ff"><span class="section-number-3">6.1</span> Teilaufgabe a</h3>
+<div class="outline-text-3" id="text-6-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">gewählt</th>
+<th scope="col" class="org-left">Randknotenmenge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">(1, 0, –)</td>
+<td class="org-left">{(2,3,1), (3,4,1), (5,11,1)}</td>
+</tr>
+
+<tr>
+<td class="org-left">(2, 3, 1)</td>
+<td class="org-left">{(3,4,1), (5,8,2)}</td>
+</tr>
+
+<tr>
+<td class="org-left">(3, 4, 1)</td>
+<td class="org-left">{(4,11,3), (5,8,2), (6,5,3)}</td>
+</tr>
+
+<tr>
+<td class="org-left">(6, 5, 3)</td>
+<td class="org-left">{(4,8,6), (5,8,2)}</td>
+</tr>
+
+<tr>
+<td class="org-left">(5, 8, 2)</td>
+<td class="org-left">{(4,8,6)}</td>
+</tr>
+
+<tr>
+<td class="org-left">(4, 8, 6)</td>
+<td class="org-left">∅</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Zielknoten</th>
+<th scope="col" class="org-right">Pfadlänge</th>
+<th scope="col" class="org-left">Pfad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-left">[1]</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-right">3</td>
+<td class="org-left">[1,2]</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-right">4</td>
+<td class="org-left">[1,3]</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-right">8</td>
+<td class="org-left">[1,3,6,4]</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-right">8</td>
+<td class="org-left">[1,2,5]</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-right">5</td>
+<td class="org-left">[1,3,6]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgf387f48" class="outline-3">
+<h3 id="orgf387f48"><span class="section-number-3">6.2</span> Teilaufgabe b</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+2
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2d75aff" class="outline-2">
+<h2 id="org2d75aff"><span class="section-number-2">7</span> Lösungen zu Aufgabe 7.1.17</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+<i>siehe Aufgabensammlung</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org28349c0" class="outline-2">
+<h2 id="org28349c0"><span class="section-number-2">8</span> Lösungen zu Aufgabe 7.2.5</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+<i>siehe Aufgabensammlung</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7077027" class="outline-2">
+<h2 id="org7077027"><span class="section-number-2">9</span> Lösungen zu Aufgabe 10.19</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-orge60def8" class="outline-3">
+<h3 id="orge60def8"><span class="section-number-3">9.1</span> Teilaufgabe a</h3>
+<div class="outline-text-3" id="text-9-1">
+<ul class="org-ul">
+<li>A: A ↦ {11, 21, 22}, B ↦ {12, 13, 23}</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org54d53e0" class="outline-3">
+<h3 id="org54d53e0"><span class="section-number-3">9.2</span> Teilaufgabe b</h3>
+<div class="outline-text-3" id="text-9-2">
+<ul class="org-ul">
+<li>h: A ↦ 21, B ↦ 10</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgacf1232" class="outline-3">
+<h3 id="orgacf1232"><span class="section-number-3">9.3</span> Teilaufgabe c</h3>
+<div class="outline-text-3" id="text-9-3">
+<ul class="org-ul">
+<li>q₀: 11 ↦ 1/3 ⋅ 1/4 = 1/12, 12 ↦ 1/3 ⋅ 1/2 = 1/6, 13 ↦ 1/3 ⋅ 1/4 = 1/12,
+21 ↦ 2/3 ⋅ 1/4 = 1/6 , 22 ↦ 2/3 ⋅ 1/2 = 1/3, 23 ↦ 2/3 ⋅ 1/4 = 1/6</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4492c8b" class="outline-3">
+<h3 id="org4492c8b"><span class="section-number-3">9.4</span> Teilaufgabe d</h3>
+<div class="outline-text-3" id="text-9-4">
+<ul class="org-ul">
+<li>h₁: 11 ↦ 3, 12 ↦ 4 , 13 ↦ 2,
+21 ↦ 6, 22 ↦ 12, 23 ↦ 4</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org09ba036" class="outline-3">
+<h3 id="org09ba036"><span class="section-number-3">9.5</span> Teilaufgabe e</h3>
+<div class="outline-text-3" id="text-9-5">
+<ul class="org-ul">
+<li>h₁<sup>M</sup>: 1 ↦ 9, 2 ↦ 22</li>
+<li>h₁<sup>W</sup>: 1 ↦ 9, 2 ↦ 16, 3 ↦ 6</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org55cb740" class="outline-3">
+<h3 id="org55cb740"><span class="section-number-3">9.6</span> Teilaufgabe f</h3>
+<div class="outline-text-3" id="text-9-6">
+<ul class="org-ul">
+<li>q₁<sup>M</sup>: 1 ↦ 9/31, 2 ↦ 22/31</li>
+<li>q₁<sup>W</sup>: 1 ↦ 9/31, 2 ↦ 16/31, 3 ↦ 6/31</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2019-01-28</p>
+<p class="date">Created: 2019-01-28 Mo 12:44</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+#+title: Lösungen zum 14. Übungsblatt
+#+date: 2019-01-28
+#+email: tobias.denkinger@tu-dresden.de
+#+options: toc:nil
+
+Aufgaben:
+
+| # | AGS    | Typ                    | Stimmen |
+|   | <l>    |                        |         |
+|---+--------+------------------------+---------|
+| 9 | 10.19  | *EM-Algorithmus*       |      17 |
+| 2 | 3.2.13 | *C-Programmierung*     |      17 |
+| 1 | 2.2.53 | *EBNF*                 |      10 |
+| 6 | 9.5.16 | *Dijkstra-Algorithmus* |       8 |
+| 5 | 4.26   | pulsierender Speicher  |       7 |
+| 7 | 7.1.17 | KMP-Algorithmus        |       7 |
+| 8 | 7.2.5  | Levenshtein-Distanz    |       2 |
+| 3 | 6.1.13 | Quicksort              |       0 |
+| 4 | 6.2.15 | Heapsort               |       0 |
+
+* Lösungen zu Aufgabe 2.2.53
+** Teilaufgabe a
+  * V = {A, S}
+  * R: S ::= (aScc|aAcc), A ::= (bAc|{b})
+
+** Teilaufgabe b
+
+#+begin_src elisp
+f(ρ) = X ⎛⟦(aXa|Y)⟧(ρ)⎞ = ⎛{a} ∘ ρ(X) ∘ {a} ∪ ρ(Y)⎞
+       Y ⎝⟦[bY]⟧(ρ)   ⎠   ⎝{b} ∘ ρ(Y) ∪ {ε}       ⎠
+
+⊥ = ⎛∅⎞ ↦ ⎛ ∅ ⎞ ↦ ⎛ {ε} ⎞ ↦ ⎛{ε, b, aa}⎞ ↦ ⎛{aa, aba, aaaa, ε, b, bb}⎞
+    ⎝∅⎠   ⎝{ε}⎠   ⎝{ε,b}⎠   ⎝{ε, b, bb}⎠   ⎝{ε, b, bb, bbb}          ⎠
+#+end_src
+
+  * W(ℰ) = {aᵏbᵐaᵏ ∣ k, m ∈ ℕ}
+
+* Lösungen zu Aufgabe 3.2.13
+
+#+begin_src c
+#include <stdlib.h>
+
+struct node { int wert; struct node * next; };
+
+// (a)
+struct treeNode { int value; struct treeNode * left; struct treeNode * right; }
+
+// (b)
+struct treeNode * full(struct node * list) {
+  if (!list) return NULL;
+  struct treeNode *t = malloc(sizeof(struct treeNode));
+  t->value = list->wert;
+  t->left = full(list->next);
+  t->right = full(list->next);
+
+  return t;
+}
+
+// (c)
+// struct node * l;
+// full(l);
+#+end_src
+
+* Lösung zu Aufgabe 6.1.13
+
+/siehe Aufgabensammlung/
+
+* Lösung zu Aufgabe 6.2.15
+
+/siehe Aufgabensammlung/
+
+* Lösung zu Aufgabe 4.26
+
+/siehe Aufgabensammlung/
+
+* Lösungen zu Aufgabe 9.5.16
+** Teilaufgabe a
+
+| gewählt   | Randknotenmenge              |
+|-----------+------------------------------|
+| (1, 0, –) | {(2,3,1), (3,4,1), (5,11,1)} |
+| (2, 3, 1) | {(3,4,1), (5,8,2)}           |
+| (3, 4, 1) | {(4,11,3), (5,8,2), (6,5,3)} |
+| (6, 5, 3) | {(4,8,6), (5,8,2)}           |
+| (5, 8, 2) | {(4,8,6)}                    |
+| (4, 8, 6) | ∅                            |
+
+| Zielknoten | Pfadlänge | Pfad      |
+|------------+-----------+-----------|
+|          1 |         0 | [1]       |
+|          2 |         3 | [1,2]     |
+|          3 |         4 | [1,3]     |
+|          4 |         8 | [1,3,6,4] |
+|          5 |         8 | [1,2,5]   |
+|          6 |         5 | [1,3,6]   |
+
+** Teilaufgabe b
+
+2
+
+* Lösungen zu Aufgabe 7.1.17
+
+/siehe Aufgabensammlung/
+
+* Lösungen zu Aufgabe 7.2.5
+
+/siehe Aufgabensammlung/
+
+* Lösungen zu Aufgabe 10.19
+** Teilaufgabe a
+  * A: A ↦ {11, 21, 22}, B ↦ {12, 13, 23}
+
+** Teilaufgabe b
+  * h: A ↦ 21, B ↦ 10
+
+** Teilaufgabe c
+  - q₀: 11 ↦ 1/3 ⋅ 1/4 = 1/12, 12 ↦ 1/3 ⋅ 1/2 = 1/6, 13 ↦ 1/3 ⋅ 1/4 = 1/12,
+        21 ↦ 2/3 ⋅ 1/4 = 1/6 , 22 ↦ 2/3 ⋅ 1/2 = 1/3, 23 ↦ 2/3 ⋅ 1/4 = 1/6
+
+** Teilaufgabe d
+  * h₁: 11 ↦ 3, 12 ↦ 4 , 13 ↦ 2,
+        21 ↦ 6, 22 ↦ 12, 23 ↦ 4
+
+** Teilaufgabe e
+  * h₁^M: 1 ↦ 9, 2 ↦ 22
+  * h₁^W: 1 ↦ 9, 2 ↦ 16, 3 ↦ 6 
+
+** Teilaufgabe f
+  * q₁^M: 1 ↦ 9/31, 2 ↦ 22/31 
+  * q₁^W: 1 ↦ 9/31, 2 ↦ 16/31, 3 ↦ 6/31 
